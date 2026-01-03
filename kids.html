@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>MyShop</title>
+
+    <style>
+        body {
+            background-color: rgb(223, 217, 217);
+        }
+
+        /* ===== CAROUSEL ===== */
+        .carousel img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .carousel img {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .carousel img {
+                height: 180px;
+            }
+        }
+
+        /* ===== PRODUCT CARDS ===== */
+        .card {
+            border-radius: 10px;
+            overflow: hidden;
+            
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: 260px;
+            object-fit: contain;
+            /* FULL IMAGE FIT */
+            background-color: #fff;
+            padding: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover .card-img-top {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+
+
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">MyShop</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signinModal">
+                            Signin
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">
+                            Signup
+                        </a>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="./category.html">Category</a></li>
+                </ul>
+
+                <form class="d-flex mx-lg-auto my-2 my-lg-0">
+                    <input class="form-control me-2" type="search" placeholder="Search products">
+                    <button class="btn btn-light">Search</button>
+                </form>
+
+                <a href="./card.html" class="nav-link">
+                    <i class="fa fa-shopping-cart fs-4 text-white"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://cms.landmarkshops.in/cdn-cgi/image/w=1232,q=85,fit=cover/LS-Fest/LS-new/HP_LS_Kids_Desktop-7-19Aug25.jpg"
+                    alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="https://cdn.fcglcdn.com/brainbees/images/cattemplate/winter_moas_default_page_271125_11.jpg"
+                    alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="https://www.onefridayworld.com/cdn/shop/collections/banner-sale_1920x.webp?v=1756362970"
+                    alt="">
+            </div>
+        </div>
+    </div>
+
+
+    <!--sarees-->
+    <div>
+        <h1 class=" text-center text-danger"> TRENDING DRESS</h1>
+    </div>
+
+
+    <div class="container my-4">
+        <div class="row g-3 text-center">
+
+            <!-- CARD -->
+            <div class="col-lg-3 col-md-4 col-sm-3">
+                <div class="card h-100">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/kids-dress/s/s/d/2-3-years-baby-girl-casual-dress-ibanu-original-imahghbggjjw29q3.jpeg?q=70"
+                        class="card-img-top">
+                    <div class="card-body d-flex flex-column bg-light">
+                        <h6>Girls Above Knee Casual Dress </h6>
+                        <p class="fw-bold text-dark">
+                            <i class="fa fa-inr"></i> 179
+                            <span style="color: green;">(30% off)</span>
+                        </p>
+                        <p class="text-danger small">Inclusive of all items</p>
+                        <div class="mt-auto">
+                            <button class="btn btn-primary btn-sm">View</button>
+                            <button class="btn btn-outline-danger btn-sm">Add cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD -->
+            <div class="col-lg-3 col-md-4 col-sm-3">
+                <div class="card h-100">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/kids-dress/6/z/h/14-15-years-kids-combo01-riswa-resized-2-original-imahezzct6mpwnf8.jpeg?q=70"
+                        class="card-img-top">
+                    <div class="card-body d-flex flex-column bg-light">
+                        <h6>Barbie Girls Calf Length Party Dress</h6>
+                        <p class="fw-bold text-dark">
+                            <i class="fa fa-inr"></i>478
+                            <span style="color: green;">(80% off)</span>
+                        </p>
+                        <p class="text-danger small">Inclusive of all items</p>
+                        <div class="mt-auto">
+                            <button class="btn btn-primary btn-sm">View</button>
+                            <button class="btn btn-outline-danger btn-sm">Add cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD -->
+            <div class="col-lg-3 col-md-4 col-sm-3">
+                <div class="card h-100">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/kids-dress/y/p/g/6-7-years-cpgl0097-pink-chandrika-lifestyle-resized-2-original-imahc6k7fwzqjy8q.jpeg?q=70"
+                        class="card-img-top">
+                    <div class="card-body d-flex flex-column bg-light">
+                        <h6>Girls Calf Length Party Dress</h6>
+                        <p class="fw-bold text-dark">
+                            <i class="fa fa-inr"></i>229
+                            <span style="color: green;">(30% off)</span>
+                        </p>
+                        <p class="text-danger small">Inclusive of all items</p>
+                        <div class="mt-auto">
+                            <button class="btn btn-primary btn-sm">View</button>
+                            <button class="btn btn-outline-danger btn-sm">Add cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD -->
+            <div class="col-lg-3 col-md-4 col-sm-3">
+                <div class="card h-100">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/kids-dress/g/r/d/2-3-years-frock-d15-165-a-asma-dresses-original-imahgf22ghzzczyd.jpeg?q=70"
+                        class="card-img-top">
+                    <div class="card-body d-flex flex-column bg-light">
+                        <h6>Girls Above Knee Casual Dress</h6>
+                        <p class="fw-bold text-dark">
+                            <i class="fa fa-inr"></i>255
+                            <span style="color: green;">(20% off)</span>
+                        </p>
+                        <p class="text-danger small">Inclusive of all items</p>
+                        <div class="mt-auto">
+
+                            <button class="btn btn-primary btn-sm">View</button>
+                            <button class="btn btn-outline-danger btn-sm">Add cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <img src="https://logan.nnnow.com/content/dam/nnnow-project/14-nov-2025/17NOV25-KLP-TB1-MOB.jpg"
+        class="img-fluid w-75 mx-auto d-block">
+    <div class="text-center my-2">
+        <h2 class="text-danger">SHOP BY AGE </h2>
+    </div>
+
+    <div class="container my-4">
+        <div class="row g-3 text-center">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <img src="https://cdn.fynd.com/v2/falling-surf-7c8bb8/fyprod/wrkr/company/4770/applications/6464d5ec9926e2022868956b/theme/pictures/free/resize-w:900/theme-image-1740662659284.png?dpr=1"
+                    class="img-fluid" alt="">
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <img src="https://cdn.fynd.com/v2/falling-surf-7c8bb8/fyprod/wrkr/company/4770/applications/6464d5ec9926e2022868956b/theme/pictures/free/resize-w:900/theme-image-1740030998974.png?dpr=1"
+                    class="img-fluid" alt="">
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <img src="https://cdn.fynd.com/v2/falling-surf-7c8bb8/fyprod/wrkr/company/4770/applications/6464d5ec9926e2022868956b/theme/pictures/free/resize-w:900/theme-image-1740031012788.png?dpr=1"
+                    class="img-fluid" alt="">
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <img src="https://cdn.fynd.com/v2/falling-surf-7c8bb8/fyprod/wrkr/company/4770/applications/6464d5ec9926e2022868956b/theme/pictures/free/resize-w:900/theme-image-1740031026047.png?dpr=1"
+                    class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+
+
+    <!--sboys dress-->
+    <div>
+        <h1 class=" text-center text-success">BOYS DRESS</h1>
+    </div>
+
+
+    <div class="container my-4">
+        <div class="row g-3 text-center">
+
+            <!-- CARD -->
+            <div class="col-lg-3 col-md-4 col-sm-3">
+                <div class="card h-100">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/kids-t-shirt/c/r/o/10-11-years-tiger-golden-bg-online-original-imagykpvcjhvbezn.jpeg?q=70"
+                        class="card-img-top">
+                    <div class="card-body d-flex flex-column bg-light">
+                        <h6>Boys & Girls Animal Print Cotton Blend Regular </h6>
+                        <p class="fw-bold text-dark">
+                            <i class="fa fa-inr"></i>233
+                            <span style="color: green;">(30% off)</span>
+                        </p>
+                        <p class="text-danger small">Inclusive of all items</p>
+                        <div class="mt-auto">
+                            <button class="btn btn-primary btn-sm">View</button>
+                            <button class="btn btn-outline-danger btn-sm">Add cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD -->
+            <div class="col-lg-3 col-md-4 col-sm-3">
+                <div class="card h-100">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/kids-t-shirt/h/y/t/13-14-years-kil-bpolo-aop-wte-flower-1pck-killer-original-imahgcuqkw7fynjd.jpeg?q=70"
+                        class="card-img-top">
+                    <div class="card-body d-flex flex-column bg-light">
+                        <h6>Boys Printed Pure Cotton Regular T Shirt</h6>
+                        <p class="fw-bold text-dark">
+                            <i class="fa fa-inr"></i>470
+                            <span style="color: green;">(50% off)</span>
+                        </p>
+                        <p class="text-danger small">Inclusive of all items</p>
+                        <div class="mt-auto">
+                            <button class="btn btn-primary btn-sm">View</button>
+                            <button class="btn btn-outline-danger btn-sm">Add cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD -->
+            <div class="col-lg-3 col-md-4 col-sm-3">
+                <div class="card h-100">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/kids-t-shirt/p/6/h/13-14-years-kd-print-911-hood-black-l-uzee-original-imaguxrrgpqmhxnr.jpeg?q=70"
+                        class="card-img-top">
+                    <div class="card-body d-flex flex-column bg-light">
+                        <h6>Boys Printed Cotton Blend Regular T Shirt</h6>
+                        <p class="fw-bold text-dark">
+                            <i class="fa fa-inr"></i>220
+                            <span style="color: green;">(20% off)</span>
+                        </p>
+                        <p class="text-danger small">Inclusive of all items</p>
+                        <div class="mt-auto">
+                            <button class="btn btn-primary btn-sm">View</button>
+                            <button class="btn btn-outline-danger btn-sm">Add cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD -->
+            <div class="col-lg-3 col-md-4 col-sm-3">
+                <div class="card h-100">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/kids-t-shirt/i/1/z/13-14-years-sst-5-sleev-bl-hand-show-in-style-original-imah2z5buczhy9pa.jpeg?q=70"
+                        class="card-img-top">
+                    <div class="card-body d-flex flex-column bg-light">
+                        <h6>Boys Printed Pure Cotton Oversized T Shirt </h6>
+                        <p class="fw-bold text-dark">
+                            <i class="fa fa-inr"></i>255
+                            <span style="color: green;">(20% off)</span>
+                        </p>
+                        <p class="text-danger small">Inclusive of all items</p>
+                        <div class="mt-auto">
+
+                            <button class="btn btn-primary btn-sm">View</button>
+                            <button class="btn btn-outline-danger btn-sm">Add cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--girls dress-->
+    <div>
+        <h1 class=" text-center text-success">GIRLS DRESS</h1>
+    </div>
+
+
+    <div class="container my-4">
+        <div class="row g-3 text-center">
+
+            <!-- CARD -->
+            <div class="col-lg-3 col-md-4 col-sm-3">
+                <div class="card h-100">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/kids-dress/y/p/g/6-7-years-cpgl0097-pink-chandrika-lifestyle-resized-2-original-imahc6k7fwzqjy8q.jpeg?q=70"
+                        class="card-img-top">
+                    <div class="card-body d-flex flex-column bg-light">
+                        <h6>Girls Calf Length Party Dress </h6>
+                        <p class="fw-bold text-dark">
+                            <i class="fa fa-inr"></i>229
+                            <span style="color: green;">(30% off)</span>
+                        </p>
+                        <p class="text-danger small">Inclusive of all items</p>
+                        <div class="mt-auto">
+                            <button class="btn btn-primary btn-sm">View</button>
+                            <button class="btn btn-outline-danger btn-sm">Add cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD -->
+            <div class="col-lg-3 col-md-4 col-sm-3">
+                <div class="card h-100">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/kids-dress/z/x/v/8-9-years-pc373-pink-pn-fashion-original-imahcghu8a9dfgsv.jpeg?q=70"
+                        class="card-img-top">
+                    <div class="card-body d-flex flex-column bg-light">
+                        <h6>Girls Below Knee Festive/Wedding Dress</h6>
+                        <p class="fw-bold text-dark">
+                            <i class="fa fa-inr"></i>370
+                            <span style="color: green;">(50% off)</span>
+                        </p>
+                        <p class="text-danger small">Inclusive of all items</p>
+                        <div class="mt-auto">
+                            <button class="btn btn-primary btn-sm">View</button>
+                            <button class="btn btn-outline-danger btn-sm">Add cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD -->
+            <div class="col-lg-3 col-md-4 col-sm-3">
+                <div class="card h-100">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/kids-dress/j/z/h/2-3-years-2305-befab-enterprise-resized-2-original-imahcjkmvzpyg97x.jpeg?q=70"
+                        class="card-img-top">
+                    <div class="card-body d-flex flex-column bg-light">
+                        <h6>Girls Midi/Knee Length Casual Dress </h6>
+                        <p class="fw-bold text-dark">
+                            <i class="fa fa-inr"></i>250
+                            <span style="color: green;">(20% off)</span>
+                        </p>
+                        <p class="text-danger small">Inclusive of all items</p>
+                        <div class="mt-auto">
+                            <button class="btn btn-primary btn-sm">View</button>
+                            <button class="btn btn-outline-danger btn-sm">Add cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD -->
+            <div class="col-lg-3 col-md-4 col-sm-3">
+                <div class="card h-100">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/kids-dress/4/m/s/7-8-years-kk-frock-afrin-fashion-original-imahftqzpyhyxzgb.jpeg?q=70"
+                        class="card-img-top">
+                    <div class="card-body d-flex flex-column bg-light">
+                        <h6>Girls Below Knee Festive/Wedding Dress </h6>
+                        <p class="fw-bold text-dark">
+                            <i class="fa fa-inr"></i>258
+                            <span style="color: green;">(20% off)</span>
+                        </p>
+                        <p class="text-danger small">Inclusive of all items</p>
+                        <div class="mt-auto">
+
+                            <button class="btn btn-primary btn-sm">View</button>
+                            <button class="btn btn-outline-danger btn-sm">Add cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- SIGNIN MODAL -->
+    <div class="modal fade" id="signinModal" tabindex="-1">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content bg-secondary text-light">
+
+                <div class="modal-header py-2">
+                    <h6 class="modal-title">Signin</h6>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body p-3">
+                    <form class="was-validated">
+                        <div class="mb-2">
+                            <label class="form-label small">Email</label>
+                            <input type="email" class="form-control form-control-sm" required>
+                        </div>
+
+                        <div class="mb-2">
+                            <label class="form-label small">Password</label>
+                            <input type="password" class="form-control form-control-sm" required>
+                        </div>
+
+                        <button class="btn btn-dark btn-sm w-100">Login</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- SIGNUP MODAL -->
+    <div class="modal fade" id="signupModal" tabindex="-1">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content bg-secondary text-light">
+
+                <div class="modal-header py-2">
+                    <h6 class="modal-title">Signup</h6>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body p-3">
+                    <form class="was-validated">
+
+                        <div class="mb-2">
+                            <label class="form-label small">First Name</label>
+                            <input type="text" class="form-control form-control-sm" required>
+                        </div>
+
+                        <div class="mb-2">
+                            <label class="form-label small">Last Name</label>
+                            <input type="text" class="form-control form-control-sm" required>
+                        </div>
+
+                        <div class="mb-2">
+                            <label class="form-label small">Email</label>
+                            <input type="email" class="form-control form-control-sm" required>
+                        </div>
+
+                        <div class="mb-2">
+                            <label class="form-label small">Password</label>
+                            <input type="password" class="form-control form-control-sm" required>
+                        </div>
+
+                        <div class="mb-2">
+                            <label class="form-label small">Confirm Password</label>
+                            <input type="password" class="form-control form-control-sm" required>
+                        </div>
+
+                        <div class="form-check mb-2 small">
+                            <input type="checkbox" class="form-check-input" required>
+                            <label class="form-check-label">Agree to terms</label>
+                        </div>
+
+                        <button class="btn btn-dark btn-sm w-100">Submit</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <footer class="bg-dark text-light pt-5  text-center">
+        <div class="container">
+            <div class="row">
+
+                <!-- Brand Info -->
+                <div class="col-lg-12 col-md-12 mb-4">
+                    <h5 class="fw-bold">My Shop</h5>
+                    <p class="text-light">
+                        Your one-stop shop for quality products at the best prices.
+                    </p>
+                    <input type="text" placeholder="contact gmail">
+                    <p>📍 India</p>
+                    <p>📞 +91 98765 43210</p>
+                    <p>📧 support@shopzone.com</p>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

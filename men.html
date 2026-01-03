@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>MyShop</title>
+
+    <style>
+        body {
+            background-color: rgb(223, 217, 217);
+        }
+
+        /* ===== CAROUSEL ===== */
+        .carousel img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .carousel img {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .carousel img {
+                height: 180px;
+            }
+        }
+
+        /* ===== PRODUCT CARDS ===== */
+        .card {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: 260px;
+            object-fit: contain;
+            /* FULL IMAGE FIT */
+            background-color: #fff;
+            padding: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover .card-img-top {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+
+
+
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="#">MyShop</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="./index.html">Home</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signinModal">
+                            Signin
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">
+                            Signup
+                        </a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="./category.html">Category</a></li>
+
+                </ul>
+
+                <form class="d-flex mx-lg-auto my-2 my-lg-0">
+                    <input class="form-control me-2" type="search" placeholder="Search products">
+                    <button class="btn btn-light">Search</button>
+                </form>
+
+                <a href="./card.html" class="nav-link">
+                    <i class="fa fa-shopping-cart fs-4 text-white"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://jadeblue.com/cdn/shop/files/EOSS_MAIN_HERO_WEBSITE_BANNER_2.jpg?format=webp&v=1766131267&width=2560"
+                    alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ88kdNRncAe-o-sNT5gHmkMGsPQPGuyu_Jjg&s"
+                    alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="https://media.gq.com/photos/68fbdde6eeefcbc1b0429d4d/16:9/w_2000,h_1125,c_limit/uniqlo%20lede%20v1.png
+                " alt="">
+            </div>
+        </div>
+    </div>
+
+
+    <!--sarees-->
+    <div>
+        <h1 class="text-center text-danger"> SHIRT CATEGORY</h1>
+    </div>
+
+
+    <div class="container my-4">
+        <div class="row g-3 text-center">
+
+            <!-- CARD -->
+            <div class="col-lg-3 col-md-4 col-sm-3">
+                <div class="card h-100">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/k/0/f/s-fllowersx-zonly-original-imahhjqaqecd869w.jpeg?q=70"
+                        class="card-img-top">
+                    <div class="card-body d-flex flex-column bg-light">
+                        <h6>Men Comfort Fit, Relaxed Fit, Regular Fit </h6>
+                        <p class="fw-bold text-dark">
+                            <i class="fa fa-inr"></i> 398
+                            <span style="color: green;">(60% off)</span>
+                        </p>
+                        <p class="text-danger small">Inclusive of all items</p>
+                        <div class="mt-auto">
+                            <button class="btn btn-primary btn-sm">View</button>
+                            <button class="btn btn-outline-danger btn-sm">Add cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD -->
+            <div class="col-lg-3 col-md-4 col-sm-3">
+                <div class="card h-100">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/o/9/h/m-sksh-abc-120-md-fubar-original-imah2z79dx3vtzf7.jpeg?q=70"
+                        class="card-img-top">
+                    <div class="card-body d-flex flex-column bg-light">
+                        <h6>Men Slim Fit Solid Spread Collar Casual Shirt</h6>
+                        <p class="fw-bold text-dark">
+                            <i class="fa fa-inr"></i> 274
+                            <span style="color: green;">(80% off)</span>
+                        </p>
+                        <p class="text-danger small">Inclusive of all items</p>
+                        <div class="mt-auto">
+                            <button class="btn btn-primary btn-sm">View</button>
+                            <button class="btn btn-outline-danger btn-sm">Add cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD -->
+            <div class="col-lg-3 col-md-4 col-sm-3">
+                <div class="card h-100">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/l/z/1/11-12-years-multicolur-klok-wear-original-imahhn5ag9vkh52d.jpeg?q=70"
+                        class="card-img-top">
+                    <div class="card-body d-flex flex-column bg-light">
+                        <h6>Solid/Plain Bollywood Satin</h6>
+                        <p class="fw-bold text-dark">
+                            <i class="fa fa-inr"></i> 495
+                            <span style="color: green;">(80% off)</span>
+                        </p>
+                        <p class="text-danger small">Inclusive of all items</p>
+                        <div class="mt-auto">
+                            <button class="btn btn-primary btn-sm">View</button>
+                            <button class="btn btn-outline-danger btn-sm">Add cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD -->
+            <div class="col-lg-3 col-md-4 col-sm-3">
+                <div class="card h-100">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/y/u/h/m-grey-white-check-jai-textiles-original-imah6zzxz8zhkeyh.jpeg?q=70"
+                        class="card-img-top">
+                    <div class="card-body d-flex flex-column bg-light">
+                        <h6>Men Slim Fit Checkered Spread Collar </h6>
+                        <p class="fw-bold text-dark">
+                            <i class="fa fa-inr"></i>355
+                            <span style="color: green;">(40% off)</span>
+                        </p>
+                        <p class="text-danger small">Inclusive of all items</p>
+                        <div class="mt-auto">
+
+                            <button class="btn btn-primary btn-sm">View</button>
+                            <button class="btn btn-outline-danger btn-sm">Add cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <img src="https://stores.blackberrys.com/files/outlet/outlet_facebook_images/outlet_cover_photo/248231/banner_2_jpg.jpg"
+        class="img-fluid w-75 mx-auto d-block">
+
+
+
+    <!--kurtas-->
+    <div>
+        <h1 class="text-center text-success my-2"> T-SHIRT CATEGORY</h1>
+    </div>
+
+
+    <div class="container my-4">
+        <div class="row g-3 text-center">
+
+            <!-- CARD -->
+            <div class="col-lg-3 col-md-4 col-sm-3">
+                <div class="card h-100">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/n/m/b/l-ustsh2223-u-s-polo-assn-original-imah4h3a7gsmkpbp.jpeg?q=70"
+                        class="card-img-top">
+                    <div class="card-body d-flex flex-column bg-light">
+                        <h6>Men Striped Polo Neck Cotton Blend White T-Shirt</h6>
+                        <p class="fw-bold text-dark">
+                            <i class="fa fa-inr"></i> 1379
+                            <span style="color: green;">(40% off)</span>
+                        </p>
+                        <p class="text-danger small">Inclusive of all items</p>
+                        <div class="mt-auto">
+                            <button class="btn btn-primary btn-sm">View</button>
+                            <button class="btn btn-outline-danger btn-sm">Add cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD -->
+            <div class="col-lg-3 col-md-4 col-sm-3">
+                <div class="card h-100">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/s/k/h/l-ht05251240rl-rigo-original-imahg7ryuyfhgty4.jpeg?q=70"
+                        class="card-img-top">
+                    <div class="card-body d-flex flex-column bg-light">
+                        <h6>Men Self Design Polo Neck Pure Cotton</h6>
+                        <p class="fw-bold text-dark">
+                            <i class="fa fa-inr"></i>376
+                            <span style="color: green;">(76% off)</span>
+                        </p>
+                        <p class="text-danger small">Inclusive of all items</p>
+                        <div class="mt-auto">
+                            <button class="btn btn-primary btn-sm">View</button>
+                            <button class="btn btn-outline-danger btn-sm">Add cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD -->
+            <div class="col-lg-3 col-md-4 col-sm-3">
+                <div class="card h-100">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/g/w/r/m-u2s7kd0ztt-try-this-original-imahj25h9yjkymp4.jpeg?q=70"
+                        class="card-img-top">
+                    <div class="card-body d-flex flex-column bg-light">
+                        <h6>Men Striped, Printed Zip Neck Cotton Blend Green, </h6>
+                        <p class="fw-bold text-dark">
+                            <i class="fa fa-inr"></i>258
+                            <span style="color: green;">(40% off)</span>
+                        </p>
+                        <p class="text-danger small">Inclusive of all items</p>
+                        <div class="mt-auto">
+                            <button class="btn btn-primary btn-sm">View</button>
+                            <button class="btn btn-outline-danger btn-sm">Add cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD -->
+            <div class="col-lg-3 col-md-4 col-sm-3">
+                <div class="card h-100">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/u/4/8/s-jf00051-jaar-fashion-original-imahj46xcgvnhuvn.jpeg?q=70"
+                        class="card-img-top">
+                    <div class="card-body d-flex flex-column bg-light">
+                        <h6>Men Solid Zip Neck Polycotton White T-Shirt </h6>
+                        <p class="fw-bold text-dark">
+                            <i class="fa fa-inr"></i>271
+                            <span style="color: green;">(44% off)</span>
+                        </p>
+                        <p class="text-danger small">Inclusive of all items</p>
+                        <div class="mt-auto">
+
+                            <button class="btn btn-primary btn-sm">View</button>
+                            <button class="btn btn-outline-danger btn-sm">Add cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!--gowns-->
+    <div>
+        <h1 class="text-center text-success my-2"> GOWNS CATEGORY</h1>
+    </div>
+
+
+    <div class="container my-4">
+        <div class="row g-3 text-center">
+
+            <!-- CARD -->
+            <div class="col-lg-3 col-md-4 col-sm-3">
+                <div class="card h-100">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/track-pant/k/l/g/38-29vsm1125aaa-open-bottom-bl-dockstreet-original-imahgaqyxskh4fh4.jpeg?q=70"
+                        class="card-img-top">
+                    <div class="card-body d-flex flex-column bg-light">
+                        <h6>Men Solid Black Track Pants</h6>
+                        <p class="fw-bold text-dark">
+                            <i class="fa fa-inr"></i>339
+                            <span style="color: green;">(60% off)</span>
+                        </p>
+                        <p class="text-danger small">Inclusive of all items</p>
+                        <div class="mt-auto">
+                            <button class="btn btn-primary btn-sm">View</button>
+                            <button class="btn btn-outline-danger btn-sm">Add cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD -->
+            <div class="col-lg-3 col-md-4 col-sm-3">
+                <div class="card h-100">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/track-pant/g/x/0/xxl-a23-patti-black-nivedanm-original-imahhzp6jhvrg6h3.jpeg?q=70"
+                        class="card-img-top">
+                    <div class="card-body d-flex flex-column bg-light">
+                        <h6>Men Striped Black Track Pants</h6>
+                        <p class="fw-bold text-dark">
+                            <i class="fa fa-inr"></i>373
+                            <span style="color: green;">(50% off)</span>
+                        </p>
+                        <p class="text-danger small">Inclusive of all items</p>
+                        <div class="mt-auto">
+                            <button class="btn btn-primary btn-sm">View</button>
+                            <button class="btn btn-outline-danger btn-sm">Add cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD -->
+            <div class="col-lg-3 col-md-4 col-sm-3">
+                <div class="card h-100">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/track-pant/s/t/o/s-track-dark-grey-combraided-resized-2-original-imah2f3cezhqx2ut.jpeg?q=70"
+                        class="card-img-top">
+                    <div class="card-body d-flex flex-column bg-light">
+                        <h6>Men Self Design Grey Track Pants </h6>
+                        <p class="fw-bold text-dark">
+                            <i class="fa fa-inr"></i>303
+                            <span style="color: green;">(81% off)</span>
+                        </p>
+                        <p class="text-danger small">Inclusive of all items</p>
+                        <div class="mt-auto">
+                            <button class="btn btn-primary btn-sm">View</button>
+                            <button class="btn btn-outline-danger btn-sm">Add cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD -->
+            <div class="col-lg-3 col-md-4 col-sm-3">
+                <div class="card h-100">
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/track-pant/7/c/j/m-track-black-combraided-resized-2-original-imagzgg85yubueje.jpeg?q=70"
+                        class="card-img-top">
+                    <div class="card-body d-flex flex-column bg-light">
+                        <h6>Men Self Design Black Track Pants</h6>
+                        <p class="fw-bold text-dark">
+                            <i class="fa fa-inr"></i>305
+                            <span style="color: green;">(40% off)</span>
+                        </p>
+                        <p class="text-danger small">Inclusive of all items</p>
+                        <div class="mt-auto">
+
+                            <button class="btn btn-primary btn-sm">View</button>
+                            <button class="btn btn-outline-danger btn-sm">Add cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <img src="https://blackberrys.com/cdn/shop/articles/seam_less_banner_f36149af-0efb-4d32-8c23-8318777c3b8c.jpg?v=1760522586&width=2048 "
+        class="img-fluid w-75 mx-auto d-block mb-2">
+
+
+    <!-- SIGNIN MODAL -->
+    <div class="modal fade" id="signinModal" tabindex="-1">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content bg-secondary text-light">
+
+                <div class="modal-header py-2">
+                    <h6 class="modal-title">Signin</h6>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body p-3">
+                    <form class="was-validated">
+                        <div class="mb-2">
+                            <label class="form-label small">Email</label>
+                            <input type="email" class="form-control form-control-sm" required>
+                        </div>
+
+                        <div class="mb-2">
+                            <label class="form-label small">Password</label>
+                            <input type="password" class="form-control form-control-sm" required>
+                        </div>
+
+                        <button class="btn btn-dark btn-sm w-100">Login</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- SIGNUP MODAL -->
+    <div class="modal fade" id="signupModal" tabindex="-1">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content bg-secondary text-light">
+
+                <div class="modal-header py-2">
+                    <h6 class="modal-title">Signup</h6>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body p-3">
+                    <form class="was-validated">
+
+                        <div class="mb-2">
+                            <label class="form-label small">First Name</label>
+                            <input type="text" class="form-control form-control-sm" required>
+                        </div>
+
+                        <div class="mb-2">
+                            <label class="form-label small">Last Name</label>
+                            <input type="text" class="form-control form-control-sm" required>
+                        </div>
+
+                        <div class="mb-2">
+                            <label class="form-label small">Email</label>
+                            <input type="email" class="form-control form-control-sm" required>
+                        </div>
+
+                        <div class="mb-2">
+                            <label class="form-label small">Password</label>
+                            <input type="password" class="form-control form-control-sm" required>
+                        </div>
+
+                        <div class="mb-2">
+                            <label class="form-label small">Confirm Password</label>
+                            <input type="password" class="form-control form-control-sm" required>
+                        </div>
+
+                        <div class="form-check mb-2 small">
+                            <input type="checkbox" class="form-check-input" required>
+                            <label class="form-check-label">Agree to terms</label>
+                        </div>
+
+                        <button class="btn btn-dark btn-sm w-100">Submit</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <footer class="bg-dark text-light pt-5  text-center">
+        <div class="container">
+            <div class="row">
+
+                <!-- Brand Info -->
+                <div class="col-lg-12 col-md-12 mb-4">
+                    <h5 class="fw-bold">My Shop</h5>
+                    <p class="text-light">
+                        Your one-stop shop for quality products at the best prices.
+                    </p>
+                    <input type="text" placeholder="contact gmail">
+                    <p>📍 India</p>
+                    <p>📞 +91 98765 43210</p>
+                    <p>📧 support@shopzone.com</p>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>
